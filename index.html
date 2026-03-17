@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RecipeJS - Your Functional Cooking Companion</title>
+    <title>RecipeJS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
     <h1>🍳 RecipeJS</h1>
-    <p>Your Functional Cooking Companion</p>
+
+    <!-- SEARCH BAR -->
+    <div class="search-box">
+        <input type="text" id="search-input" placeholder="Search recipes...">
+        <button id="clear-search">✖</button>
+    </div>
 </header>
 
 <main>
 
-    <!-- Controls -->
+    <!-- FILTERS -->
     <div class="controls">
         <div class="filter-buttons">
             <button data-filter="all" class="active">All</button>
@@ -23,6 +28,7 @@
             <button data-filter="medium">Medium</button>
             <button data-filter="hard">Hard</button>
             <button data-filter="quick">Quick</button>
+            <button data-filter="favorites">❤️ Favorites</button>
         </div>
 
         <div class="sort-buttons">
@@ -32,7 +38,10 @@
         </div>
     </div>
 
-    <!-- Recipes -->
+    <!-- COUNTER -->
+    <p id="recipe-count"></p>
+
+    <!-- RECIPES -->
     <div id="recipe-container"></div>
 
 </main>
